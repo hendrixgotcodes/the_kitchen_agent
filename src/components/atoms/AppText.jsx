@@ -4,7 +4,7 @@ import { Poppins_400Regular, useFonts } from '@expo-google-fonts/poppins'
 
 import _colors from '../../assets/_colors'
  
-export default function AppText({color, children, extraStyle=null, ...props}) {
+export default function AppText({color, children, extraStyle=null, size=16,...props}) {
     
     const [isFontLoaded] = useFonts({
         Poppins_400Regular
@@ -17,7 +17,7 @@ export default function AppText({color, children, extraStyle=null, ...props}) {
         return (
             <Text 
                 style={[
-                    {color: color},
+                    {color: color, fontSize: size},
                     styles.text,
                     extraStyle
                 ]}
@@ -30,7 +30,7 @@ export default function AppText({color, children, extraStyle=null, ...props}) {
         return (
             <Text 
                 style={[
-                    {color: color},
+                    {color: color, fontSize: size},
                     styles.text, 
                     styles.fontFamily,
                     extraStyle
@@ -47,7 +47,7 @@ export default function AppText({color, children, extraStyle=null, ...props}) {
  
 const styles = StyleSheet.create({
     text: {
-        fontSize: 16
+        // fontSize: 16
     },
     fontFamily:{
         fontFamily: 'Poppins_400Regular'

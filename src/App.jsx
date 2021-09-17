@@ -30,6 +30,9 @@ import Vegetarian from './components/illustrations/Vegetarian';
 import Whole30 from './components/illustrations/Whole30';
 import SafeAreaScreen from './screens/SafeAreaScreen';
 import DietSelectionScreen from './screens/DietSelectionScreen';
+import SplashScreen from './screens/SplashScreen';
+import AppCarousel from './components/organisms/AppCarousel';
+import OnboardingScreen from './screens/OnboardingScreen';
 
 const img = ()=>{
 
@@ -45,7 +48,8 @@ const img = ()=>{
 
 export default function App() {
   return (
-    <DietSelectionScreen/>
+    // <SplashScreen/>
+    <OnboardingScreen/>
   );
 }
 

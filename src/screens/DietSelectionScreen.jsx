@@ -14,6 +14,8 @@ import Primal from '../components/illustrations/Primal'
 import SafeAreaScreen from './SafeAreaScreen'
 import { FlexibleButton } from '../components/molecules/AppButton'
 import _colors from '../assets/_colors'
+import AppReturnButton from '../components/molecules/AppReturnButton'
+import Pescatarian from '../components/illustrations/Pescatarian'
 
 const gridData=[
     {
@@ -42,21 +44,32 @@ const gridData=[
     },
     {
       id: 5,
-      color: "#3A3E5B",
+      color: "#FDE86E",
       icon: LactoVege,
       text: "Lacto Verge"
     },
     {
-      id: 6,
+        id:6,
+        color: "#007C42",
+        icon: Pescatarian,
+        text: "Pescatarian"
+    },
+    {
+      id: 7,
       color: "#E5D9BF",
       icon: Whole30,
       text: "Whole 30"
     },
     {
-      id: 7,
+      id: 8,
       color: "#FC6E47",
       icon: Paleo,
       text: "Paleo"
+    },{
+        id:10,
+        color: "#3A3E5B",
+        icon: Primal,
+        text: "Primal"
     }
 ]
  
@@ -80,6 +93,12 @@ export default function DietSelectionScreen() {
     
     return (
         <SafeAreaScreen style={styles.container}>
+
+            <AppReturnButton
+                extraStyle={styles.appRtnBtn}
+                size={16}
+                text="Back"
+            />
 
             <View>
                 <AppHeader 
@@ -106,10 +125,13 @@ export default function DietSelectionScreen() {
 }
  
 const styles = StyleSheet.create({
+    appRtnBtn:{
+        alignSelf:"flex-start"
+    },
     button:{
-        alignSelf: "flex-end",
-        width: 109,
-        borderBottomLeftRadius: 0,
+        alignSelf: "center",
+        width: 223,
+        // borderBottomLeftRadius: 0,
         borderWidth: 1,
         borderColor: _colors.primary
     },
