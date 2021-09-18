@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { View, StyleSheet, useWindowDimensions, FlatList, Text, Animated } from 'react-native'
 import AppText from '../atoms/AppText'
+import AppTextBold from '../atoms/AppTextBold'
 
 import Slide1 from '../illustrations/carousel/Slide1'
 import Slide2 from '../illustrations/carousel/Slide2'
@@ -98,12 +99,12 @@ function CarouselItem({title, description, Illustration}){
             <View
                 style={styles.textWrapper}
             >
-                <AppText
+                <AppTextBold
                     extraStyle={styles.title}
                     
                 >
                     {title}
-                </AppText>
+                </AppTextBold>
 
                 <AppText
                     extraStyle={styles.description}
@@ -165,22 +166,28 @@ const styles = StyleSheet.create({
     description:{
         textAlign: "center",
     },
+    dot:{
+        height: 8,
+        backgroundColor: "#000",
+        borderRadius: 5,
+        marginHorizontal: 8
+    },
     flatList:{
         // flex: 3,\
     },
     illustrationWrapper:{
         alignItems: "center",
-        flex: 0.8,
         justifyContent:"center",
+        marginBottom:50,
     },
     textWrapper:{
-        flex: 0.2,
+        // flex: 0.2,
         justifyContent: "center",
         alignItems:"center"
     },
     title:{
         fontWeight: "900",
-        fontSize: 24,
+        fontSize: 26,
         textAlign: "center"
     },
     paginator:{
@@ -188,10 +195,4 @@ const styles = StyleSheet.create({
         height: 64,
         alignSelf: "center"
     },
-    dot:{
-        height: 8,
-        backgroundColor: "#000",
-        borderRadius: 5,
-        marginHorizontal: 8
-    }
 })

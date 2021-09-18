@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import { Text, StyleSheet } from 'react-native'
-import { Poppins_400Regular, useFonts } from '@expo-google-fonts/poppins'
+import { Poppins_700Bold, useFonts } from '@expo-google-fonts/poppins'
 
 import _colors from '../../assets/_colors'
  
-export default function AppText({color, children, extraStyle=null, size=16,...props}) {
+export default function AppTextBold({color, children, extraStyle=null, size=16,...props}) {
     
     const [isFontLoaded] = useFonts({
-        Poppins_400Regular
+        Poppins_700Bold
     })
 
     color = (color===undefined) ?  _colors.primary : color
@@ -47,11 +47,9 @@ export default function AppText({color, children, extraStyle=null, size=16,...pr
  
 const styles = StyleSheet.create({
     text: {
-        textAlign: "center",
-        justifyContent: "center",
-        alignItems: "center"
+        // fontSize: 16
     },
     fontFamily:{
-        fontFamily: 'Poppins_400Regular'
+        fontFamily: 'Poppins_700Bold'
     }
 })

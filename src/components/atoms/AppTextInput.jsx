@@ -3,7 +3,7 @@ import {Text, StyleSheet, TextInput} from 'react-native'
 import { useFonts, Poppins_400Regular } from '@expo-google-fonts/poppins'
 import _colors from '../../assets/_colors'
 
-export default function AppTextInput({ placeholder }){
+export default function AppTextInput({ extraStyles, placeholder }){
 
     const [borderColor, setBorderColor] = useState(_colors.primary)
     
@@ -33,6 +33,7 @@ export default function AppTextInput({ placeholder }){
                 style={[
                     {borderBottomColor: borderColor}, 
                     styles.default, 
+                    extraStyles
                 ]}
             />
         )
@@ -47,7 +48,8 @@ export default function AppTextInput({ placeholder }){
                 style={[
                         {borderBottomColor: borderColor}, 
                         styles.default, 
-                        styles.fontFamily
+                        styles.fontFamily,
+                        extraStyles
                 ]}
             />
         )

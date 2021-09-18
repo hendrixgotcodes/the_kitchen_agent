@@ -20,12 +20,13 @@ export default function OnboardingScreen() {
 const styles = StyleSheet.create({
     container: {
         flex:1,
-        paddingVertical:30
+        paddingVertical:50,
+        justifyContent:"center"
     },
     button: {
         alignSelf: "center",
         backgroundColor: _colors.primary,
-        width: 163,
+        width: 223,
     }
     
 })

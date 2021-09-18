@@ -33,6 +33,8 @@ import DietSelectionScreen from './screens/DietSelectionScreen';
 import SplashScreen from './screens/SplashScreen';
 import AppCarousel from './components/organisms/AppCarousel';
 import OnboardingScreen from './screens/OnboardingScreen';
+import SigninScreen from './screens/SigninScreen';
+import SignupScreen from './screens/SignupScreen';
 
 const img = ()=>{
 
@@ -49,7 +51,8 @@ const img = ()=>{
 export default function App() {
   return (
     // <SplashScreen/>
-    <OnboardingScreen/>
+    // <OnboardingScreen/>
+    <SigninScreen />
   );
 }
 

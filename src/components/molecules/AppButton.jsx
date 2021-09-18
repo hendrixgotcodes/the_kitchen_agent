@@ -1,5 +1,5 @@
 import React from 'react'
-import { Pressable, StyleSheet, View, } from 'react-native'
+import { Pressable, StyleSheet, TouchableOpacity, View, } from 'react-native'
 import _colors from '../../assets/_colors'
 import AppText from '../atoms/AppText'
  
@@ -37,7 +37,7 @@ export function FlexibleButton({backgroundColor=_colors.secondary, color=_colors
 
     return(
 
-        <Pressable
+        <TouchableOpacity
             onPress={onPress}
             style={[
                 styles.flexibleButton,
@@ -49,7 +49,7 @@ export function FlexibleButton({backgroundColor=_colors.secondary, color=_colors
             {/* {icon !== null && icon} <AppText>{text}</AppText> */}
             {icon !== null && icon}
             <AppText color={color}>{text}</AppText>
-        </Pressable>
+        </TouchableOpacity>
 
     )
 

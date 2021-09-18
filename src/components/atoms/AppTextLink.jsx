@@ -4,15 +4,13 @@ import AppText from './AppText'
  
 export default function AppTextLink({children, onPress}) {
     return (
-        <Pressable
+        
+        <AppText
+            extraStyle={styles.text}
             onPress={onPress}
         >
-            <AppText
-                extraStyle={styles.text}
-            >
-                {children}
-            </AppText>
-        </Pressable>
+            {children}
+        </AppText>
     )
 }
  
