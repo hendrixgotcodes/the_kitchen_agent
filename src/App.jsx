@@ -35,6 +35,7 @@ import AppCarousel from './components/organisms/AppCarousel';
 import OnboardingScreen from './screens/OnboardingScreen';
 import SigninScreen from './screens/SigninScreen';
 import SignupScreen from './screens/SignupScreen';
+import TabNavigator from './navigation/TabNavigator';
 
 const img = ()=>{
 
@@ -52,15 +53,7 @@ export default function App() {
   return (
     // <SplashScreen/>
     // <OnboardingScreen/>
-    <SigninScreen />
+    // <SigninScreen />
+      <TabNavigator />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

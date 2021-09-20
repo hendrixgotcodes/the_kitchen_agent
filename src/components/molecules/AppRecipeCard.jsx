@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImageBackground, StyleSheet, View, } from 'react-native'
+import { ImageBackground, Platform, StyleSheet, View, } from 'react-native'
 import AppLabel from '../atoms/AppLabel'
 import AppText from '../atoms/AppText'
 
@@ -97,8 +97,9 @@ function IconoText({iconTitle, text=""}){
 
 const styles = StyleSheet.create({
     container: {
-        height: "55%",
-        width: "90%",
+        // height: Platform.OS==="ios" ? 500 : 480,
+        height: "100%",
+        width: "100%",
     },
     contentWrapper:{
         alignItems: "flex-start",

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { ScrollView, StyleSheet, View } from 'react-native'
 import AppChip from './AppChip'
  
-export default function AppChipTray({onRemoveItem=()=>{}, controlsSorting=false, dataList, ...additionalScrollProps}) {
+export default function AppChipTray({onRemoveItem=()=>{}, allowRemove=false, controlsSorting=false, dataList, ...additionalScrollProps}) {
 
     const [currentChip, setCurrentChip] = useState(controlsSorting === true ? "all" : null)
 
@@ -60,8 +60,9 @@ export default function AppChipTray({onRemoveItem=()=>{}, controlsSorting=false,
                             style={styles.chipWrapper}
                         >
                             <AppChip 
-                                allowRemove={true}
+                                allowRemove={allowRemove}
                                 current={currentChip===chip.text ? true : false}
+                                key={chip.text}
                                 text={chip.text}
                                 onSelect={()=>handleOnCurrentSet(chip)}
                                 onRemove={()=>handleOnRemoveChip(chip)}

@@ -5,9 +5,9 @@ import _colors from '../../assets/_colors'
 import { AppTextInputSecondary } from '../atoms/AppTextInput'
 import { FlexibleButton } from './AppButton'
  
-export default function AppInput({onSubmit}) {
+export default function AppInput({extraStyle, onSubmit}) {
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, extraStyle]}>
 
             <AppTextInputSecondary 
                 height={50}
