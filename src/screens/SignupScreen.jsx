@@ -8,7 +8,16 @@ import AppButton, { FlexibleButton } from '../components/molecules/AppButton'
 import AppHeader from '../components/molecules/AppHeader'
 import SafeAreaScreen from './SafeAreaScreen'
  
-export default function SignupScreen() {
+export default function SignupScreen({navigation}) {
+
+    const handleSignmeinOnPress= ()=>{
+
+        console.log(navigation);
+
+        navigation.navigate("Signin")
+
+    }
+
     return (
         <KeyboardAvoidingView
             behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
@@ -63,10 +72,11 @@ export default function SignupScreen() {
                             extraStyle={{marginTop: 10}}
                         >
                             Already have an account. 
+
                             <AppTextLink
-                                onPress={()=>console.log("hi")}
+                                onPress={handleSignmeinOnPress}
                             >
-                                Sign me in
+                                Sign me in.
                             </AppTextLink>
                         </AppText>
                     </View>

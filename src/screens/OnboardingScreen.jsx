@@ -5,7 +5,14 @@ import _colors from '../assets/_colors'
 import { FlexibleButton } from '../components/molecules/AppButton'
 import AppCarousel from '../components/organisms/AppCarousel'
  
-export default function OnboardingScreen() {
+export default function OnboardingScreen({navigation}) {
+
+    const handleButtonOnPress = ()=>{
+
+        navigation.navigate("Signup")
+
+    }
+
     return (
         <View style={styles.container}>
             <StatusBar 
@@ -13,9 +20,10 @@ export default function OnboardingScreen() {
             />
             <AppCarousel />
             <FlexibleButton 
-                text="Start Cooking"
                 color={_colors.secondary}
                 extraStyle={styles.button}
+                text="Start Cooking"
+                onPress={handleButtonOnPress}
             />
         </View>
     )
@@ -25,7 +33,8 @@ const styles = StyleSheet.create({
     container: {
         flex:1,
         paddingVertical:50,
-        justifyContent:"center"
+        justifyContent:"center",
+        backgroundColor: _colors.secondary
     },
     button: {
         alignSelf: "center",

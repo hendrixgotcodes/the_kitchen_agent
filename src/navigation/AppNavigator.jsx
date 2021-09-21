@@ -31,7 +31,7 @@ export default function TabNavigator(){
 
     return(
 
-        <NavigationContainer>
+        <>
             <Tab.Navigator
                 screenOptions={{
                     headerShown: false,
@@ -93,7 +93,7 @@ export default function TabNavigator(){
                 />
 
             </Tab.Navigator>
-        </NavigationContainer>
+        </>
 
     )
 
