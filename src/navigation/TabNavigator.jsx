@@ -9,30 +9,20 @@ import SafeAreaScreen from '../screens/SafeAreaScreen';
 import Primal from '../components/illustrations/Primal';
 import HomeScreen from '../screens/HomeScreen';
 
+import CelerySeed from '../components/illustrations/CelerySeed'
+import IngredientScreen from '../screens/IngredientScreen';
+import BookmarksScreen from '../screens/BookmarksScreen';
+import SettingsScreen from '../screens/SettingsScreen';
+
   
 function SearchScreen() {
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Search!</Text>
+            <Text>Search!</Text>
         </View>
     );
 }
 
-function BookmarkScreen() {
-    return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Bookmarks!</Text>
-        </View>
-    );
-}
-
-function SettingsScreen() {
-    return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Settings!</Text>
-        </View>
-    );
-}
 
 const Tab = createBottomTabNavigator()
 
@@ -67,12 +57,12 @@ export default function TabNavigator(){
                     }}                    
                 />
                 <Tab.Screen 
-                    name="Search" 
-                    component={SearchScreen}
+                    name="Search by ingredients" 
+                    component={IngredientScreen}
                     options={{
                         tabBarIcon: ({focused})=>(
                             <TabBarIcon
-                            
+                                CustomIcon={CelerySeed}
                                 focused={focused} 
                                 iconName="magnify" 
                             />
@@ -81,7 +71,7 @@ export default function TabNavigator(){
                 />
                 <Tab.Screen 
                     name="Bookmarks" 
-                    component={BookmarkScreen}
+                    component={BookmarksScreen}
                     options={{
                         tabBarIcon: ({focused})=>(
                             <TabBarIcon focused={focused} iconName="bookmark-outline" />

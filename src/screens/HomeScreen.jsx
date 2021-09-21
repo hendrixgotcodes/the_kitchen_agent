@@ -9,7 +9,14 @@ import SafeAreaScreen from './SafeAreaScreen'
  
 
 const recipeList = [
-    {imgSrc: require("../assets/img/feed/recipe2.jpg")}
+    {
+        estTime: 15,
+        imgSrc: require("../assets/img/feed/recipe2.jpg"),
+        healthScore: 5.0,
+        name: "Afrolems",
+        numOfPeoplePerServing: 10,
+        type: "primal"
+    }
 ]
 
 export default function HomeScreen() {
@@ -21,7 +28,7 @@ export default function HomeScreen() {
             >
 
                 <View
-                    style={styles.wrapper}
+                    style={styles.mainWrapper}
                 >
 
                     <AppTextBold
@@ -47,7 +54,7 @@ export default function HomeScreen() {
                     />
                     
                     <View
-                        style={styles.recipeCardWrapper}
+                        style={styles.listWrapper}
                     >
                         <AppRecipeList
                             data={recipeList}
@@ -73,11 +80,11 @@ const styles = StyleSheet.create({
     input:{
         paddingVertical: 15
     },
-    recipeCardWrapper:{
+    listWrapper:{
         marginVertical: 20,
         flex: 1
     },
-    wrapper: {
+    mainWrapper: {
         // overflow:"hidden",
         width: "100%",
         ...Platform.select({

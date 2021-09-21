@@ -40,9 +40,13 @@ export default function AppRecipeCard({estTime, healthScore, imgSrc="", name, nu
                             >
                                 {name}
                             </H1>
-                            <AppText color={_colors.dark_lighter} extraStyle={{fontSize: 16}}>
-                                {typeof(healthScore) === "number" ? parseFloat(healthScore) : healthScore} health score
-                            </AppText>
+                            <View
+                                style={{alignSelf: "flex-start"}}
+                            >
+                                <AppText color={_colors.dark_lighter} extraStyle={{fontSize: 16,textalign: "center"}}>
+                                    {typeof(healthScore) === "number" ? parseFloat(healthScore) : healthScore} health score
+                                </AppText>
+                            </View>
                         </View>
 
                         <View
@@ -84,6 +88,7 @@ function IconoText({iconTitle, text=""}){
                 size={15}
                 color={_colors.dark_lighter}
             />
+            
             <AppText
                 extraStyle={{color: _colors.dark_lighter}}
             >
