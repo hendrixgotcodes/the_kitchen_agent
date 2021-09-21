@@ -68,6 +68,7 @@ export default function SettingsScreen() {
 
                     <SectionList
                         bounces={false}
+                        keyExtractor={(item, index)=>index.toString()}
                         renderItem={({item})=><ListItem Icon={item.icon} text={item.text} />}
                         renderSectionHeader={({section:{title}})=><ListHeader>{title}</ListHeader>}
                         sections={settingsMenu}

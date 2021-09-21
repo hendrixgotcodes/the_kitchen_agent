@@ -3,7 +3,7 @@ import { View, StyleSheet } from 'react-native'
 import AppTextBold from '../components/atoms/AppTextBold'
 import SafeAreaScreen from './SafeAreaScreen'
  
-export default function BookmarksScreen() {
+export default function FavoritesScreen() {
     return (
         <SafeAreaScreen>
 
@@ -17,7 +17,7 @@ export default function BookmarksScreen() {
                     <AppTextBold
                         extraStyle={styles.header}
                     >
-                        Bookmarks
+                        Favorites
                     </AppTextBold>
 
                 </View>

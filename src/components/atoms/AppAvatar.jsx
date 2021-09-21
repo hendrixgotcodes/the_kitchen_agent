@@ -1,17 +1,26 @@
 import React from 'react'
 import { View, StyleSheet, Image } from 'react-native'
+import UserIcon from '../illustrations/UserIcon'
  
 export default function AppAvatar({customHeight=90, customWidth=90, imgSource}) {
+
+    console.log(UserIcon);
 
     return (
         <View 
             style={[styles.container, {height: customHeight, width: customWidth}]}
         >
-            <Image 
-                // source={imgSource}
-                source={require("../../assets/img/dp.jpg")}
-                style={styles.img}
-            />
+            {
+                imgSource === "" ? (
+                    <Image 
+                        // source={imgSource}
+                        source={require("../../assets/img/dp.jpg")}
+                        style={styles.img}
+                    />
+                ) : (
+                    <UserIcon />
+                )
+            }
         </View>
     )
 }
@@ -33,7 +42,7 @@ const styles = StyleSheet.create({
         overflow: "hidden"
     },
     defaultAvtrImg:{
-        
+
     },
     img:{
         height: "100%",

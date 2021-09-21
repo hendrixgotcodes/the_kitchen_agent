@@ -11,7 +11,7 @@ import HomeScreen from '../screens/HomeScreen';
 
 import CelerySeed from '../components/illustrations/CelerySeed'
 import KitchenHuntScreen from '../screens/KitchenHuntScreen';
-import BookmarksScreen from '../screens/BookmarksScreen';
+import FavoritesScreen from '../screens/FavoritesScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
   
@@ -71,7 +71,7 @@ export default function TabNavigator(){
                 />
                 <Tab.Screen 
                     name="Favorites" 
-                    component={BookmarksScreen}
+                    component={FavoritesScreen}
                     options={{
                         tabBarIcon: ({focused})=>(
                             <TabBarIcon focused={focused} iconName="heart-outline" />
