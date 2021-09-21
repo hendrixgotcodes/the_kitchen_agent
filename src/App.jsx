@@ -35,7 +35,7 @@ import AppCarousel from './components/organisms/AppCarousel';
 import OnboardingScreen from './screens/OnboardingScreen';
 import SigninScreen from './screens/SigninScreen';
 import SignupScreen from './screens/SignupScreen';
-import TabNavigator from './navigation/TabNavigator';
+import TabNavigator from './navigation/AppNavigator';
 
 const img = ()=>{
 
