@@ -85,7 +85,6 @@ const styles = StyleSheet.create({
         flex: 1
     },
     mainWrapper: {
-        // overflow:"hidden",
         width: "100%",
         ...Platform.select({
             android: {

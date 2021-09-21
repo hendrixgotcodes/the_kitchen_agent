@@ -27,6 +27,7 @@ export default function AppRecipeList({data=[]}) {
             )}
             onRefresh={()=>{}}
             style={styles.list}
+            keyExtractor={(item)=>item.name.toString()}
         />
     )
 }

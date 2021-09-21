@@ -2,7 +2,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native'
 import {createBottomNavigator, createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import { View, Text, StyleSheet, Platform } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Spices from '../components/illustrations/Spices'
 import SafeAreaScreen from '../screens/SafeAreaScreen';
@@ -10,7 +10,7 @@ import Primal from '../components/illustrations/Primal';
 import HomeScreen from '../screens/HomeScreen';
 
 import CelerySeed from '../components/illustrations/CelerySeed'
-import IngredientScreen from '../screens/IngredientScreen';
+import KitchenHuntScreen from '../screens/KitchenHuntScreen';
 import BookmarksScreen from '../screens/BookmarksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
@@ -58,7 +58,7 @@ export default function TabNavigator(){
                 />
                 <Tab.Screen 
                     name="Search by ingredients" 
-                    component={IngredientScreen}
+                    component={KitchenHuntScreen}
                     options={{
                         tabBarIcon: ({focused})=>(
                             <TabBarIcon
@@ -70,11 +70,11 @@ export default function TabNavigator(){
                     }}  
                 />
                 <Tab.Screen 
-                    name="Bookmarks" 
+                    name="Favorites" 
                     component={BookmarksScreen}
                     options={{
                         tabBarIcon: ({focused})=>(
-                            <TabBarIcon focused={focused} iconName="bookmark-outline" />
+                            <TabBarIcon focused={focused} iconName="heart-outline" />
                         )
                     }}  
                 />
@@ -86,7 +86,7 @@ export default function TabNavigator(){
                             <TabBarIcon 
                                 CustomIcon={null}
                                 focused={focused} 
-                                iconName="cog-outline" 
+                                iconName="settings-outline" 
                             />
                         )
                     }}  
@@ -109,10 +109,10 @@ function TabBarIcon({CustomIcon=null, focused=false, iconName}){
         >
             {
                 CustomIcon === null ? (
-                    <MaterialCommunityIcons 
+                    <Ionicons 
                         color="#fff" 
                         name={iconName} 
-                        size={24}
+                        size={22}
                     />
                 ) : (
                     <CustomIcon />

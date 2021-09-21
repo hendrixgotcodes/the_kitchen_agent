@@ -43,7 +43,7 @@ export default function AppRecipeCard({estTime, healthScore, imgSrc="", name, nu
                             <View
                                 style={{alignSelf: "flex-start"}}
                             >
-                                <AppText color={_colors.dark_lighter} extraStyle={{fontSize: 16,textalign: "center"}}>
+                                <AppText color={_colors.dark_lighter} extraStyle={{fontSize: 16,textAlign: "center"}}>
                                     {typeof(healthScore) === "number" ? parseFloat(healthScore) : healthScore} health score
                                 </AppText>
                             </View>

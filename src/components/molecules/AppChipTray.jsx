@@ -56,7 +56,7 @@ export default function AppChipTray({onRemoveItem=()=>{}, allowRemove=false, con
                 {
                     chips.map((chip)=>(
                         <View
-                            key={chip.id}
+                            key={chip.text}
                             style={styles.chipWrapper}
                         >
                             <AppChip 

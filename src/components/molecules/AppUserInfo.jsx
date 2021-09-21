@@ -4,21 +4,30 @@ import AppAvatar from '../atoms/AppAvatar'
 import AppText from '../atoms/AppText'
 import AppTextBold from '../atoms/AppTextBold'
  
-export default function AppUserInfo({title, subTitle}) {
+export default function AppUserInfo({title, extraStyle, subTitle}) {
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, extraStyle]}>
             <AppAvatar 
                 imgSource={require("../../assets/img/dp.jpg")}
             />
             <AppTextBold
                 extraStyle={styles.title}
+                numberOfLines={2}
             >
-                Samuel Asare
+                {title}
             </AppTextBold>
-            <AppText>asare11samuel@gmail.com</AppText>
+            <AppText
+                ellipsizeMode="middle"
+                numberOfLines={1}
+            >
+                {subTitle}
+            </AppText>
         </View>
     )
 }
+
+
+
  
 const styles = StyleSheet.create({
     container: {
@@ -26,6 +35,9 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     title:{
-        fontSize: 20
+        fontSize: 20,
+        textTransform: "capitalize",
+        marginVertical: 2,
+        textAlign: "center"
     }
 })

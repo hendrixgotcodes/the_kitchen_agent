@@ -15,12 +15,25 @@ export default function AppAvatar({customHeight=90, customWidth=90, imgSource}) 
         </View>
     )
 }
- 
+
+function DefaultAvtrImage(){
+
+    return(
+        <View>
+
+        </View>
+    )
+
+}
+
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "black",
+        backgroundColor: "#dfdfdf",
         borderRadius: 45,
         overflow: "hidden"
+    },
+    defaultAvtrImg:{
+        
     },
     img:{
         height: "100%",
