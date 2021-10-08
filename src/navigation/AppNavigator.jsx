@@ -43,7 +43,8 @@ export default function TabNavigator(){
                         <View 
                             style={styles.tabBarBackgroundStyle}
                         />
-                    )
+                    ),
+                    
                 }}
             >
 

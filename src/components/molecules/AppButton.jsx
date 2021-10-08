@@ -8,7 +8,10 @@ export default function AppButton({icon=null, onPress, style=null, text, type="p
     if(type==="primary"){
 
         return (
-            <Pressable style={[styles.default, styles.primary, style]}>
+            <Pressable 
+                onPress={onPress}
+                style={[styles.default, styles.primary, style]}
+            >
                 {icon !== null && <View style={styles.iconWrapper}>{icon}</View>}
                 <AppText color="#fff">
                     {text}

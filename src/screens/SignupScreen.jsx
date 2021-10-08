@@ -12,8 +12,6 @@ export default function SignupScreen({navigation}) {
 
     const handleSignmeinOnPress= ()=>{
 
-        console.log(navigation);
-
         navigation.navigate("Signin")
 
     }
@@ -59,7 +57,7 @@ export default function SignupScreen({navigation}) {
                         >
                             <AppButton
                                 style={styles.primaryBtn}
-                                text="Sign in"
+                                text="Sign up"
                             />
                             <AppButton
                                 icon={<MaterialCommunityIcons name="google" size={16} />}

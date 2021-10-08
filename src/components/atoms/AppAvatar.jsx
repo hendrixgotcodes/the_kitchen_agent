@@ -2,9 +2,7 @@ import React from 'react'
 import { View, StyleSheet, Image } from 'react-native'
 import UserIcon from '../illustrations/UserIcon'
  
-export default function AppAvatar({customHeight=90, customWidth=90, imgSource}) {
-
-    console.log(UserIcon);
+export default function AppAvatar({customHeight=90, customWidth=90, imgSource=""}) {
 
     return (
         <View 

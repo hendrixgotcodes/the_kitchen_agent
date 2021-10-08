@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, FlatList, SectionList } from 'react-native'
+import { View, StyleSheet, FlatList, SectionList, TouchableHighlight } from 'react-native'
 import AppTextBold from '../components/atoms/AppTextBold'
 import Avatar from '../components/atoms/AppAvatar'
 import SafeAreaScreen from './SafeAreaScreen'
@@ -7,6 +7,8 @@ import AppUserInfo from '../components/molecules/AppUserInfo'
 import AppText from '../components/atoms/AppText'
 import _colors from '../assets/_colors'
 import { Ionicons } from '@expo/vector-icons'
+
+import { UserContext } from '../utils/user-contexts'
 
 
 const settingsMenu = [
@@ -42,7 +44,6 @@ const settingsMenu = [
 ]
 
 export default function SettingsScreen() {
-
     
     return (
         <SafeAreaScreen>
@@ -100,6 +101,23 @@ function ListHeader({children}){
 }
 
 function ListItem({Icon, text}){
+
+    if(text === "Sign out")
+        return(
+            <TouchableHighlight
+                style={styles.listItem}
+                underlayColor="red"
+                activeOpacity={0.6}
+                
+            >
+                <View style={styles.listItemTitle}
+                >
+                    {Icon}
+                    <AppText extraStyle={{textAlign: "left", marginLeft: 5}}>{text}</AppText>
+                </View>
+                {/* <Ionicons color={_colors.dark_lighter} name="arrow-forward-outline" size={16} /> */}
+            </TouchableHighlight>
+        )
 
     return(
         <View

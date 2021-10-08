@@ -1,18 +1,29 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons'
-import React from 'react'
+import React, { useContext } from 'react'
 import { View, StyleSheet, KeyboardAvoidingView, Platform } from 'react-native'
+import { useDispatch } from 'react-redux'
 import AppText from '../components/atoms/AppText'
 import AppTextLink from '../components/atoms/AppTextLink'
 import AppTextInput from '../components/atoms/AppTextInput'
 import AppButton, { FlexibleButton } from '../components/molecules/AppButton'
 import AppHeader from '../components/molecules/AppHeader'
 import SafeAreaScreen from './SafeAreaScreen'
+import { userSliceActions } from '../store/features/user'
+
  
 export default function SigninScreen({navigation}) {
 
+    const dispatch = useDispatch()
+
     const handleSignmeupOnPress= ()=>{
 
-        navigation.navigate("Signin")
+        navigation.navigate("Signup")
+
+    }
+
+    const handleSignIn = ()=>{
+
+        dispatch(userSliceActions.logIn())
 
     }
 
@@ -53,6 +64,7 @@ export default function SigninScreen({navigation}) {
                             <AppButton
                                 style={styles.primaryBtn}
                                 text="Sign in"
+                                onPress={handleSignIn}
                             />
                             <AppButton
                                 icon={<MaterialCommunityIcons name="google" size={16} />}
@@ -66,7 +78,7 @@ export default function SigninScreen({navigation}) {
                         >
                             I don't have an account. 
                             <AppTextLink
-                                onPress={()=>handleSignmeupOnPress}
+                                onPress={handleSignmeupOnPress}
                             >
                                 Sign me up
                             </AppTextLink>
